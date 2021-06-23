@@ -1,2 +1,0 @@
-# growwTest
-groww-intern-project
