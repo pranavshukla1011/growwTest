@@ -7,13 +7,13 @@ import {
   StyleSheet,
   ImageBackground,
 } from 'react-native';
-import ButtonItem from '../Components/ButtonItem';
+import ButtonItem from './ButtonItem';
 import { StylesMain } from '../Utilities/Styles';
 import { useCounter } from '../shared/context';
 import { colors } from '../Utilities/Theme';
 import { IMG_Bkg, IMG_Won } from '../Utilities/Images';
 
-const HomeScreen = () => {
+const PuzzleScreen = ({ input }: { input: number | null }) => {
   console.log('HomeScreen Loaded');
   function getRandomBetween(min, max) {
     min = Math.ceil(min);
@@ -36,7 +36,7 @@ const HomeScreen = () => {
         style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
       >
         {' '}
-        LOSER! The number was {random}
+        LOSER! The number was {input}
       </Text>
     </View>
   ) : state.count === -1 ? (
@@ -58,7 +58,7 @@ const HomeScreen = () => {
       <Text
         style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
       >
-        You Won! Congratulations! The number was {random}
+        You Won! Congratulations! The number was {input}
       </Text>
     </View>
   ) : (
@@ -126,7 +126,7 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default PuzzleScreen;
 
 const styles = StyleSheet.create({
   imgStyle: { height: 200, width: 200 },

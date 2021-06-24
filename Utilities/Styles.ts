@@ -1,6 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export const StylesMain = StyleSheet.create({
+  Small: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  Medium: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
   Large: {
     fontSize: 32,
     fontWeight: 'bold',
@@ -54,11 +62,17 @@ export const StylesMain = StyleSheet.create({
   PaddingVerticalMedium: {
     paddingVertical: 16,
   },
-  PaddingHorizontalLarge: {
+  PaddingHorizontalExtraLarge: {
     paddingHorizontal: 32,
   },
-  PaddingVerticalLarge: {
+  PaddingVerticalExtraLarge: {
     paddingVertical: 32,
+  },
+  PaddingHorizontalLarge: {
+    paddingHorizontal: 24,
+  },
+  PaddingVerticalSmall: {
+    paddingVertical: 12,
   },
   BorderRadiusMedium: {
     borderRadius: 20,

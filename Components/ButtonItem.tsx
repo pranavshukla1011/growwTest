@@ -55,8 +55,8 @@ const ButtonItem: FC<Props> = ({ id, style, current, handler }) => {
       ) : (
         <View
           style={[
-            StylesMain.PaddingHorizontalLarge,
-            StylesMain.PaddingVerticalLarge,
+            StylesMain.PaddingHorizontalExtraLarge,
+            StylesMain.PaddingVerticalExtraLarge,
             styles.buttonUnchecked,
           ]}
         ></View>

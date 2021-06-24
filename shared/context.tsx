@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 
-const defaultState = { count: 0 };
+const defaultState = { count: 0, userNum: null };
 
 export type Action = 'increment' | 'over';
 export type Dispatch = (action: Action) => void;
@@ -12,13 +12,9 @@ const CounterContext =
 function counterReducer(state: State, action: Action) {
   switch (action) {
     case 'increment':
-      return {
-        count: state.count + 1,
-      };
+      return { ...state, count: state.count + 1 };
     case 'over':
-      return {
-        count: -1,
-      };
+      return { ...state, count: -1 };
   }
 }
 

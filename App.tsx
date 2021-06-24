@@ -3,7 +3,7 @@ import { Platform, StyleSheet, View } from 'react-native';
 import { useMediaQuery } from 'react-responsive';
 import { useMedia } from './Utilities/Media';
 import SplashScreen from './Components/SplashScreen';
-import HomeScreen from './Components/HomeScreen';
+import InputScreen from './Components/InputScreen';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { useCounter, CounterProvider } from './shared/context';
 
@@ -31,7 +31,8 @@ const App = () => {
             },
           ]}
         >
-          {!pageLoaded ? <SplashScreen /> : <HomeScreen />}
+          {/* {!pageLoaded ? <SplashScreen /> : <InputScreen />} */}
+          <InputScreen></InputScreen>
         </View>
       </View>
     </CounterProvider>
