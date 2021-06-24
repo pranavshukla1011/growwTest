@@ -36,7 +36,7 @@ const PuzzleScreen = ({ input }: { input: number | null }) => {
         style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
       >
         {' '}
-        LOSER! The number was {input}
+        You lose! Your number was {input} and hidden behind tile number {random}
       </Text>
     </View>
   ) : state.count === -1 ? (
@@ -58,7 +58,8 @@ const PuzzleScreen = ({ input }: { input: number | null }) => {
       <Text
         style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
       >
-        You Won! Congratulations! The number was {input}
+        You Won! Congratulations! Your number was {input} and hidden behind tile
+        number {random}
       </Text>
     </View>
   ) : (

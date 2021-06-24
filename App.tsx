@@ -31,8 +31,7 @@ const App = () => {
             },
           ]}
         >
-          {/* {!pageLoaded ? <SplashScreen /> : <InputScreen />} */}
-          <InputScreen></InputScreen>
+          {!pageLoaded ? <SplashScreen /> : <InputScreen />}
         </View>
       </View>
     </CounterProvider>
