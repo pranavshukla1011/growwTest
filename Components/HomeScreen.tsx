@@ -23,23 +23,31 @@ const HomeScreen = () => {
   const [random, setRandom] = useState(getRandomBetween(1, 9));
 
   const { state, dispatch } = useCounter();
-  console.log(state.count);
-  console.log(random);
+
   return state.count >= 3 ? (
     <View
-      style={[StylesMain.FlexColumnAllCenter, StylesMain.Inherit, styles.lost]}
+      style={[
+        StylesMain.FlexColumnAllCenter,
+        StylesMain.Inherit,
+        { backgroundColor: colors.lost },
+      ]}
     >
       <Text style={[StylesMain.Large, { color: colors.white }]}> LOSER!</Text>
     </View>
   ) : state.count === -1 ? (
     <View
-      style={[StylesMain.FlexColumnAllCenter, StylesMain.Inherit, styles.won]}
+      style={[
+        StylesMain.FlexColumnAllCenter,
+        StylesMain.Inherit,
+        { backgroundColor: colors.won },
+      ]}
     >
       <Image
         source={IMG_Won}
         style={[
-          { height: 200, width: 200, borderRadius: 20 },
+          styles.imgStyle,
           StylesMain.MarginBottomMedium,
+          StylesMain.BorderRadiusMedium,
         ]}
       ></Image>
       <Text style={[StylesMain.Large, { color: colors.white }]}>
@@ -114,10 +122,5 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  won: {
-    backgroundColor: '#19a119',
-  },
-  lost: {
-    backgroundColor: '#FF7F7F',
-  },
+  imgStyle: { height: 200, width: 200 },
 });

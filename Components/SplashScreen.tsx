@@ -11,7 +11,6 @@ interface State {
 }
 
 const SplashScreen = () => {
-  console.log('Splash Screen Loaded');
   const height = useMedia().height;
   const width = useMedia().width;
 

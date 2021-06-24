@@ -60,4 +60,7 @@ export const StylesMain = StyleSheet.create({
   PaddingVerticalLarge: {
     paddingVertical: 32,
   },
+  BorderRadiusMedium: {
+    borderRadius: 20,
+  },
 });
