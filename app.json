@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "growwTest",
+    "name": "growwRound1_PranavShukla",
+    "description": "Round 1 task submission for groww sde-intern(react-native). Submitted by: Pranav Shukla (pranav.1011.shukla@gmail.com)",
     "slug": "growwTest",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.pranavshukla.growwRound1"
     },
     "web": {
       "favicon": "./assets/favicon.png"

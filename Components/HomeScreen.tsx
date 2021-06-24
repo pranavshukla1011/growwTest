@@ -32,7 +32,12 @@ const HomeScreen = () => {
         { backgroundColor: colors.lost },
       ]}
     >
-      <Text style={[StylesMain.Large, { color: colors.white }]}> LOSER!</Text>
+      <Text
+        style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
+      >
+        {' '}
+        LOSER! The number was {random}
+      </Text>
     </View>
   ) : state.count === -1 ? (
     <View
@@ -50,8 +55,10 @@ const HomeScreen = () => {
           StylesMain.BorderRadiusMedium,
         ]}
       ></Image>
-      <Text style={[StylesMain.Large, { color: colors.white }]}>
-        You Won! Congratulations!
+      <Text
+        style={[StylesMain.Large, { color: colors.white, textAlign: 'center' }]}
+      >
+        You Won! Congratulations! The number was {random}
       </Text>
     </View>
   ) : (
